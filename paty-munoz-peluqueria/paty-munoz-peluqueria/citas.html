@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendar cita | Paty Muñoz Peluquería</title>
+</head>
+<body>
+  <h1>Agendar cita</h1>
+  <p><a href="index.html">Inicio</a> | <a href="servicios.html">Servicios</a> | <a href="galeria.html">Galería</a> | <a href="citas.html">Agendar cita</a> | <a href="paty.html">Conoce a Paty</a></p>
+  <form action="/citas" method="post" autocomplete="on">
+    <fieldset>
+      <legend> Tus datos</legend>
+      <p><label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: María Pérez" minlength="3" maxlength="60" required></p>
+      <p><label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" required></p>
+      <p><label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" pattern="09[0-9]{8}" placeholder="0991234567" required></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Tu cita</legend>
+      <p><label for="servicio">Servicio:</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Selecciona</option>
+        <optgroup label="Uñas">
+          <option value="uñas-acrílicas">Uñas acrílicas</option>
+          <option value="esmaltado-semipermanente">Esmaltado semipermanente</option>
+          <option value="manicure-tradicional">Manicure tradicional</option>
+          <option value="pedicure-tradicional">Pedicure tradicional</option>
+        </optgroup>
+        <optgroup label="Eventos">
+          <option value="maquillaje-social">Maquillaje social</option>
+          <option value="peinados">Peinados</option>
+        </optgroup>
+        <optgroup label="Cabello">
+          <option value="diseño-de-cabello">Diseño de cabello</option>
+          <option value="planchado">Planchado</option>
+          <option value="cepillado">Cepillado</option>
+          <option value="tinte-y-colorimetría">Tinte y colorimetría</option>
+          <option value="tratamientos-capilares">Tratamientos capilares</option>
+          <option value="mechas">Mechas</option>
+          <option value="rayitos">Rayitos</option>
+          <option value="balayage">Balayage</option>
+          <option value="keratina">Keratina</option>
+          <option value="antifrizz">Antifrizz</option>
+        </optgroup>
+        <optgroup label="Cejas y pestañas">
+          <option value="diseño-de-cejas">Diseño de cejas</option>
+          <option value="cejas-con-henna">Cejas con henna</option>
+          <option value="lifting-de-pestañas">Lifting de pestañas</option>
+          <option value="pestañas-punto-a-punto">Pestañas punto a punto</option>
+        </optgroup>
+      </select></p>
+      <p><label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+      <label for="hora">Hora:</label>
+      <input type="time" id="hora" name="hora" min="08:00" max="19:00" required></p>
+      <p>Extras:
+      <label><input type="checkbox" name="extra" value="lavado"> Lavado</label>
+      <label><input type="checkbox" name="extra" value="tratamiento"> Tratamiento</label></p>
+      <p><label for="personas">Personas:</label>
+      <input type="number" id="personas" name="personas" min="1" max="5" value="1"></p>
+      <p><label for="comentario">Comentario:</label><br>
+      <textarea id="comentario" name="comentario" rows="4" cols="40" maxlength="200"></textarea></p>
+    </fieldset>
+
+    <p><button type="submit">Enviar solicitud</button>
+    <button type="reset">Limpiar</button></p>
+  </form>
+</body>
+</html>
